@@ -1,0 +1,867 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; object-src 'none'; script-src resource: chrome:; connect-src https:; img-src https: data: blob: chrome:; style-src 'unsafe-inline';">
+    <meta name="color-scheme" content="light dark">
+    <title data-l10n-id="newtab-page-title"></title>
+    <link rel="icon" type="image/png" href="chrome://branding/content/icon32.png"/>
+    <link rel="localization" href="branding/brand.ftl" />
+    <link rel="localization" href="toolkit/branding/brandings.ftl" />
+    <link rel="localization" href="browser/newtab/newtab.ftl" />
+    <link rel="stylesheet" href="chrome://global/skin/design-system/tokens-brand.css">
+    <link rel="stylesheet" href="chrome://browser/content/contentSearchUI.css" />
+    <link rel="stylesheet" href="chrome://activity-stream/content/css/activity-stream.css" />
+  </head>
+  <!-- Cached: Thu, 22 Feb 2024 02:36:52 GMT -->
+  <body class="activity-stream">
+    <div id="header-asrouter-container" role="presentation"></div>
+    <div id="root">
+      <div><span><button class="icon icon-settings personalize-button" data-l10n-id="newtab-personalize-icon-label"></button><div class="customize-menu" role="dialog" data-l10n-id="newtab-personalize-dialog-label"><button class="close-button" data-l10n-id="newtab-custom-close-button"></button><div></div><div class="home-section"><div id="shortcuts-section" class="section"><moz-toggle id="shortcuts-toggle" pressed="true" onToggle="function() {
+    [native code]
+}" data-preference="feeds.topsites" data-eventSource="TOP_SITES" data-l10n-id="newtab-custom-shortcuts-toggle" data-l10n-attrs="label, description"></moz-toggle><div><div class="more-info-top-wrapper"><div class="more-information"><select id="row-selector" class="selector" name="row-count" data-preference="topSitesRows" aria-labelledby="custom-shortcuts-title"><option selected="" value="1" data-l10n-id="newtab-custom-row-selector" data-l10n-args="{&quot;num&quot;: 1}"></option><option value="2" data-l10n-id="newtab-custom-row-selector" data-l10n-args="{&quot;num&quot;: 2}"></option><option value="3" data-l10n-id="newtab-custom-row-selector" data-l10n-args="{&quot;num&quot;: 3}"></option><option value="4" data-l10n-id="newtab-custom-row-selector" data-l10n-args="{&quot;num&quot;: 4}"></option></select><div class="check-wrapper" role="presentation"><input type="checkbox" id="sponsored-shortcuts" class="sponsored-checkbox" checked="" data-preference="showSponsoredTopSites" data-eventSource="SPONSORED_TOP_SITES"/><label class="sponsored" for="sponsored-shortcuts" data-l10n-id="newtab-custom-sponsored-sites"></label></div></div></div></div></div><div id="recent-section" class="section"><label class="switch"><moz-toggle id="highlights-toggle" onToggle="function() {
+    [native code]
+}" data-preference="feeds.section.highlights" data-eventSource="HIGHLIGHTS" data-l10n-id="newtab-custom-recent-toggle" data-l10n-attrs="label, description"></moz-toggle></label></div><span class="divider" role="separator"></span><div><button id="settings-link" class="external-link" data-l10n-id="newtab-custom-settings"></button></div></div></div></span><div class="outer-wrapper ds-outer-wrapper-breakpoint-override visible-logo"><main><div class="non-collapsible-section"><div class="search-wrapper"><div class="logo-and-wordmark"><div class="logo"></div><div class="wordmark"></div></div><div class="search-inner-wrapper"><button class="search-handoff-button" tabindex="-1"><div class="fake-textbox"></div><input type="search" class="fake-editable" tabindex="-1" aria-hidden="true"/><div class="fake-caret"></div></button></div></div></div><div class="body-wrapper on"><div class="discovery-stream ds-layout"><div class="ds-column ds-column-12"><div class="ds-column-grid"><div><div class="ds-top-sites"><section class="collapsible-section top-sites" data-section-id="topsites"><div class="section-top-bar"><h3 class="section-title-container " style="visibility:hidden"><span class="section-title"><span data-l10n-id="newtab-section-header-topsites"></span></span><span class="learn-more-link-wrapper"></span></h3></div><div><ul class="top-sites-list"><li class="top-site-outer"><div class="top-site-inner"><a class="top-site-button" href="https://www.naver.com/" tabindex="0" draggable="true" data-is-sponsored-link="false"><div class="tile" aria-hidden="true"><div class="icon-wrapper" data-fallback="n"><div class="top-site-icon rich-icon" style="background-image:url(data:image/png;base64,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)"></div></div></div><div class="title"><span dir="auto">naver<span class="sponsored-label" data-l10n-id="newtab-topsite-sponsored"></span></span></div></a><div><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;naver&quot;}" class="context-menu-button icon"></button></div><div class="topsite-impression-observer"></div></div></li><li class="top-site-outer"><div class="top-site-inner"><a class="top-site-button" href="https://code.visualstudio.com/" tabindex="0" draggable="true" data-is-sponsored-link="false"><div class="tile" aria-hidden="true"><div class="icon-wrapper" data-fallback="c"><div></div><div class="top-site-icon default-icon" data-fallback="" style="background-image:url(data:image/png;base64,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)"></div></div></div><div class="title"><span dir="auto">code.visualstudio<span class="sponsored-label" data-l10n-id="newtab-topsite-sponsored"></span></span></div></a><div><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;code.visualstudio&quot;}" class="context-menu-button icon"></button></div><div class="topsite-impression-observer"></div></div></li><li class="top-site-outer"><div class="top-site-inner"><a class="top-site-button" href="https://www.youtube.com/" tabindex="0" draggable="true" data-is-sponsored-link="false"><div class="tile" aria-hidden="true"><div class="icon-wrapper" data-fallback="Y"><div class="top-site-icon rich-icon" style="background-image:url(chrome://activity-stream/content/data/content/tippytop/images/youtube-com@2x.png)"></div></div></div><div class="title"><span dir="auto">YouTube<span class="sponsored-label" data-l10n-id="newtab-topsite-sponsored"></span></span></div></a><div><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;YouTube&quot;}" class="context-menu-button icon"></button></div><div class="topsite-impression-observer"></div></div></li><li class="top-site-outer"><div class="top-site-inner"><a class="top-site-button" href="https://www.facebook.com/" tabindex="0" draggable="true" data-is-sponsored-link="false"><div class="tile" aria-hidden="true"><div class="icon-wrapper" data-fallback="F"><div class="top-site-icon rich-icon" style="background-image:url(chrome://activity-stream/content/data/content/tippytop/images/facebook-com@2x.png)"></div></div></div><div class="title"><span dir="auto">Facebook<span class="sponsored-label" data-l10n-id="newtab-topsite-sponsored"></span></span></div></a><div><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Facebook&quot;}" class="context-menu-button icon"></button></div><div class="topsite-impression-observer"></div></div></li><li class="top-site-outer"><div class="top-site-inner"><a class="top-site-button" href="https://www.wikipedia.org/" tabindex="0" draggable="true" data-is-sponsored-link="false"><div class="tile" aria-hidden="true"><div class="icon-wrapper" data-fallback="W"><div class="top-site-icon rich-icon" style="background-image:url(chrome://activity-stream/content/data/content/tippytop/images/wikipedia-org@2x.png)"></div></div></div><div class="title"><span dir="auto">Wikipedia<span class="sponsored-label" data-l10n-id="newtab-topsite-sponsored"></span></span></div></a><div><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Wikipedia&quot;}" class="context-menu-button icon"></button></div><div class="topsite-impression-observer"></div></div></li><li class="top-site-outer"><div class="top-site-inner"><a class="top-site-button" href="https://www.reddit.com/" tabindex="0" draggable="true" data-is-sponsored-link="false"><div class="tile" aria-hidden="true"><div class="icon-wrapper" data-fallback="R"><div class="top-site-icon rich-icon" style="background-image:url(chrome://activity-stream/content/data/content/tippytop/images/reddit-com@2x.png)"></div></div></div><div class="title"><span dir="auto">Reddit<span class="sponsored-label" data-l10n-id="newtab-topsite-sponsored"></span></span></div></a><div><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Reddit&quot;}" class="context-menu-button icon"></button></div><div class="topsite-impression-observer"></div></div></li><li class="top-site-outer hide-for-narrow"><div class="top-site-inner"><a class="top-site-button" href="https://www.amazon.com/" tabindex="0" draggable="true" data-is-sponsored-link="false"><div class="tile" aria-hidden="true"><div class="icon-wrapper" data-fallback="A"><div class="top-site-icon rich-icon" style="background-image:url(chrome://activity-stream/content/data/content/tippytop/images/amazon@2x.png)"></div></div></div><div class="title"><span dir="auto">Amazon<span class="sponsored-label" data-l10n-id="newtab-topsite-sponsored"></span></span></div></a><div><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Amazon&quot;}" class="context-menu-button icon"></button></div><div class="topsite-impression-observer"></div></div></li><li class="top-site-outer hide-for-narrow"><div class="top-site-inner"><a class="top-site-button" href="https://twitter.com/" tabindex="0" draggable="true" data-is-sponsored-link="false"><div class="tile" aria-hidden="true"><div class="icon-wrapper" data-fallback="T"><div class="top-site-icon rich-icon" style="background-image:url(chrome://activity-stream/content/data/content/tippytop/images/twitter-com@2x.png)"></div></div></div><div class="title"><span dir="auto">Twitter<span class="sponsored-label" data-l10n-id="newtab-topsite-sponsored"></span></span></div></a><div><button aria-haspopup="true" data-l10n-id="newtab-menu-content-tooltip" data-l10n-args="{&quot;title&quot;:&quot;Twitter&quot;}" class="context-menu-button icon"></button></div><div class="topsite-impression-observer"></div></div></li></ul><div class="edit-topsites-wrapper"></div></div></section></div></div></div></div><style data-styles="[[null]]"></style></div><div class="discovery-stream ds-layout"><div class="ds-column ds-column-12"><div class="ds-column-grid"><div></div></div></div><style data-styles="[[null]]"></style></div></div></main></div></div>
+    </div>
+    <div id="footer-asrouter-container" role="presentation"></div>
+    <script src="about:home?jscache"></script>
+    <script async type="module" src="chrome://global/content/elements/moz-toggle.mjs"></script>
+  </body>
+</html>
+window.__FROM_STARTUP_CACHE__ = true;
+window.__STARTUP_STATE__ = {
+	"TopSites": {
+		"initialized": true,
+		"rows": [
+			{
+				"bookmarkGuid": null,
+				"frecency": 4000,
+				"guid": "VyLCjATWNoAR",
+				"lastVisitDate": 1708563575152,
+				"title": "NAVER",
+				"url": "https://www.naver.com/",
+				"type": "history",
+				"favicon": "data:image/png;base64,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",
+				"faviconLength": 3599,
+				"faviconRef": "",
+				"faviconSize": 144,
+				"smallFavicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABL0lEQVQ4T2Nk/pD+iYGBgReIyQGfGZlfp/0nRydMDyPz8xQKDXiUjGKAABMX2PD/QPjx33cwm4+Jk4GJgRHM/vDvG4qDGZnvJaIY8EdxHlyB7dMWhuM/7zLcletmkGcRAYuz3E9CM+BWAqoBqvPhCk59v8Ng/biF4Y5iD4M8K9SA24loBlyLRzVAcwGKgpjHUxhaJSIQBlxPQDPgUhyqAboLURQ8/PWGgYOJlUGchR/ihcvxaAacj0U1wGAR3lhluRCHZsAZNBcYQ1zw8e83hi3vzzFEi9igaGA5i+6CE2hhYA4JA5AByueLGM7rtjLIsgvDDWE5iR4GR9FiwQoSCx//fGMQPpnF4MivwbBbpwJhwDH0WDiImg7wBgAWSUbmfagpkXQDdlGaF7anUpSdAZeXaUyHXFCmAAAAAElFTkSuQmCC",
+				"smallFaviconLength": 360,
+				"smallFaviconRef": "",
+				"smallFaviconSize": 16,
+				"hostname": "naver",
+				"typedBonus": true
+			},
+			{
+				"bookmarkGuid": null,
+				"frecency": 300,
+				"guid": "Irn0HhtE0Gih",
+				"lastVisitDate": 1708563333612,
+				"title": "Visual Studio Code - Code Editing. Redefined",
+				"url": "https://code.visualstudio.com/",
+				"type": "history",
+				"favicon": "data:image/png;base64,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",
+				"faviconLength": 2637,
+				"faviconRef": "",
+				"faviconSize": 64,
+				"smallFavicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAB6ElEQVQ4T5WSz2oTURTGvztpI6iLhFIKribpX6GFFnGlxrp04WJ8AevCbZMsKm1omxlcKFJIBR9BFEVI9iozLyDpShSEZuHGLspoF00ykzk99047mQyFtGcz955zv9/5zp0rcNGo2Iuj6ZSdu32roXW71k8j25JScSH9tv0EQbCLtpeZKdxREhLCge+VhwM2vxYR0K5SdXxMF+7Ge7ohoNbUUV5SlgZi/VsV8M0opwCFgSMCtV9VCD7k0QuszW9H1edfON/ri4krXd+Zund/OU5gwI99UKCrpNDYRecB/vytQqOVRCsLrx+aU5//S1QUDGD7lLb5kkIIBS4ODjLw2sCIxntyIcjAziNHlic/JQEy+5IhqZTNqxAiwz0EjlwH1+gpXhnsLIzJj+cB1us6jkdtjE3oSF+JGdT2QJ6Bjf4F5z8kAVLc1ngE7t7j8bLjwNXr8SFbPFYZlaWGTObf/0vcQbGxr8QyNOypecf0EoQoxqzwXaRMbC1YuXdJwGrdZAD/b3qDt49LkchqmvxOOX8asq8HJzebX4Zcnz7B8GPWMzANd6Cj3EgIUR/S7kG/OTNwbPhTNpslhtRU1w4D5qYvCVAOv68gEDUc+5nIgQZnhMga7uCsX6W5mBaifiOnt6Tw97OsI0snTJa1rSjTXMkAAAAASUVORK5CYII=",
+				"smallFaviconLength": 545,
+				"smallFaviconRef": "",
+				"smallFaviconSize": 16,
+				"hostname": "code.visualstudio",
+				"typedBonus": true
+			},
+			{
+				"isDefault": true,
+				"url": "https://www.youtube.com/",
+				"hostname": "youtube",
+				"sendAttributionRequest": false,
+				"label": "YouTube",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/youtube-com@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/youtube-com.png",
+				"typedBonus": true
+			},
+			{
+				"isDefault": true,
+				"url": "https://www.facebook.com/",
+				"hostname": "facebook",
+				"sendAttributionRequest": false,
+				"label": "Facebook",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/facebook-com@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/facebook-com.ico",
+				"typedBonus": true
+			},
+			{
+				"isDefault": true,
+				"url": "https://www.wikipedia.org/",
+				"hostname": "wikipedia",
+				"sendAttributionRequest": false,
+				"label": "Wikipedia",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/wikipedia-org@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/wikipedia-org.ico",
+				"typedBonus": true
+			},
+			{
+				"isDefault": true,
+				"url": "https://www.reddit.com/",
+				"hostname": "reddit",
+				"sendAttributionRequest": false,
+				"label": "Reddit",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/reddit-com@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/reddit-com.png",
+				"typedBonus": true
+			},
+			{
+				"isDefault": true,
+				"url": "https://www.amazon.com/",
+				"hostname": "amazon",
+				"sendAttributionRequest": false,
+				"label": "Amazon",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/amazon@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/amazon.ico",
+				"typedBonus": true
+			},
+			{
+				"isDefault": true,
+				"url": "https://twitter.com/",
+				"hostname": "twitter",
+				"sendAttributionRequest": false,
+				"label": "Twitter",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/twitter-com@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/twitter-com.ico",
+				"typedBonus": true
+			}
+		],
+		"editForm": null,
+		"showSearchShortcutsForm": false,
+		"searchShortcuts": [
+			{
+				"keyword": "@google",
+				"shortURL": "google",
+				"url": "https://google.com",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/google-com@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/google-com.ico"
+			},
+			{
+				"keyword": "@wikipedia",
+				"shortURL": "wikipedia",
+				"url": "https://wikipedia.org",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/wikipedia-org@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/wikipedia-org.ico"
+			},
+			{
+				"keyword": "@duckduckgo",
+				"shortURL": "duckduckgo",
+				"url": "https://duckduckgo.com",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/duckduckgo-com@2x.svg",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/duckduckgo-com.ico"
+			}
+		],
+		"sov": {
+			"ready": false,
+			"positions": []
+		},
+		"pref": {
+			"collapsed": false
+		}
+	},
+	"App": {
+		"initialized": true,
+		"locale": "ko",
+		"isForStartupCache": true,
+		"customizeMenuVisible": false,
+		"links": [
+			{
+				"bookmarkGuid": null,
+				"frecency": 4000,
+				"guid": "VyLCjATWNoAR",
+				"lastVisitDate": 1708563575152,
+				"title": "NAVER",
+				"url": "https://www.naver.com/",
+				"type": "history",
+				"favicon": "data:image/png;base64,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",
+				"faviconLength": 3599,
+				"faviconRef": "",
+				"faviconSize": 144,
+				"smallFavicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABL0lEQVQ4T2Nk/pD+iYGBgReIyQGfGZlfp/0nRydMDyPz8xQKDXiUjGKAABMX2PD/QPjx33cwm4+Jk4GJgRHM/vDvG4qDGZnvJaIY8EdxHlyB7dMWhuM/7zLcletmkGcRAYuz3E9CM+BWAqoBqvPhCk59v8Ng/biF4Y5iD4M8K9SA24loBlyLRzVAcwGKgpjHUxhaJSIQBlxPQDPgUhyqAboLURQ8/PWGgYOJlUGchR/ihcvxaAacj0U1wGAR3lhluRCHZsAZNBcYQ1zw8e83hi3vzzFEi9igaGA5i+6CE2hhYA4JA5AByueLGM7rtjLIsgvDDWE5iR4GR9FiwQoSCx//fGMQPpnF4MivwbBbpwJhwDH0WDiImg7wBgAWSUbmfagpkXQDdlGaF7anUpSdAZeXaUyHXFCmAAAAAElFTkSuQmCC",
+				"smallFaviconLength": 360,
+				"smallFaviconRef": "",
+				"smallFaviconSize": 16,
+				"hostname": "naver",
+				"typedBonus": true
+			},
+			{
+				"bookmarkGuid": null,
+				"frecency": 300,
+				"guid": "Irn0HhtE0Gih",
+				"lastVisitDate": 1708563333612,
+				"title": "Visual Studio Code - Code Editing. Redefined",
+				"url": "https://code.visualstudio.com/",
+				"type": "history",
+				"favicon": "data:image/png;base64,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",
+				"faviconLength": 2637,
+				"faviconRef": "",
+				"faviconSize": 64,
+				"smallFavicon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAB6ElEQVQ4T5WSz2oTURTGvztpI6iLhFIKribpX6GFFnGlxrp04WJ8AevCbZMsKm1omxlcKFJIBR9BFEVI9iozLyDpShSEZuHGLspoF00ykzk99047mQyFtGcz955zv9/5zp0rcNGo2Iuj6ZSdu32roXW71k8j25JScSH9tv0EQbCLtpeZKdxREhLCge+VhwM2vxYR0K5SdXxMF+7Ge7ohoNbUUV5SlgZi/VsV8M0opwCFgSMCtV9VCD7k0QuszW9H1edfON/ri4krXd+Zund/OU5gwI99UKCrpNDYRecB/vytQqOVRCsLrx+aU5//S1QUDGD7lLb5kkIIBS4ODjLw2sCIxntyIcjAziNHlic/JQEy+5IhqZTNqxAiwz0EjlwH1+gpXhnsLIzJj+cB1us6jkdtjE3oSF+JGdT2QJ6Bjf4F5z8kAVLc1ngE7t7j8bLjwNXr8SFbPFYZlaWGTObf/0vcQbGxr8QyNOypecf0EoQoxqzwXaRMbC1YuXdJwGrdZAD/b3qDt49LkchqmvxOOX8asq8HJzebX4Zcnz7B8GPWMzANd6Cj3EgIUR/S7kG/OTNwbPhTNpslhtRU1w4D5qYvCVAOv68gEDUc+5nIgQZnhMga7uCsX6W5mBaifiOnt6Tw97OsI0snTJa1rSjTXMkAAAAASUVORK5CYII=",
+				"smallFaviconLength": 545,
+				"smallFaviconRef": "",
+				"smallFaviconSize": 16,
+				"hostname": "code.visualstudio",
+				"typedBonus": true
+			},
+			{
+				"isDefault": true,
+				"url": "https://www.youtube.com/",
+				"hostname": "youtube",
+				"sendAttributionRequest": false,
+				"label": "YouTube",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/youtube-com@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/youtube-com.png",
+				"typedBonus": true
+			},
+			{
+				"isDefault": true,
+				"url": "https://www.facebook.com/",
+				"hostname": "facebook",
+				"sendAttributionRequest": false,
+				"label": "Facebook",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/facebook-com@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/facebook-com.ico",
+				"typedBonus": true
+			},
+			{
+				"isDefault": true,
+				"url": "https://www.wikipedia.org/",
+				"hostname": "wikipedia",
+				"sendAttributionRequest": false,
+				"label": "Wikipedia",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/wikipedia-org@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/wikipedia-org.ico",
+				"typedBonus": true
+			},
+			{
+				"isDefault": true,
+				"url": "https://www.reddit.com/",
+				"hostname": "reddit",
+				"sendAttributionRequest": false,
+				"label": "Reddit",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/reddit-com@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/reddit-com.png",
+				"typedBonus": true
+			},
+			{
+				"isDefault": true,
+				"url": "https://www.amazon.com/",
+				"hostname": "amazon",
+				"sendAttributionRequest": false,
+				"label": "Amazon",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/amazon@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/amazon.ico",
+				"typedBonus": true
+			},
+			{
+				"isDefault": true,
+				"url": "https://twitter.com/",
+				"hostname": "twitter",
+				"sendAttributionRequest": false,
+				"label": "Twitter",
+				"tippyTopIcon": "chrome://activity-stream/content/data/content/tippytop/images/twitter-com@2x.png",
+				"smallFavicon": "chrome://activity-stream/content/data/content/tippytop/favicons/twitter-com.ico",
+				"typedBonus": true
+			}
+		],
+		"pref": {
+			"collapsed": false
+		}
+	},
+	"ASRouter": {
+		"initialized": false
+	},
+	"Prefs": {
+		"initialized": true,
+		"values": {
+			"default.sites": "https://www.youtube.com/,https://www.facebook.com/,https://www.wikipedia.org/,https://www.reddit.com/,https://www.amazon.com/,https://twitter.com/",
+			"feeds.section.topstories.options": "{\"api_key_pref\":\"extensions.pocket.oAuthConsumerKey\",\"hidden\":true,\"provider_icon\":\"chrome://global/skin/icons/pocket.svg\",\"provider_name\":\"Pocket\",\"read_more_endpoint\":\"https://getpocket.com/explore/trending?src=fx_new_tab\",\"stories_endpoint\":\"https://getpocket.cdn.mozilla.net/v3/firefox/global-recs?version=3&consumer_key=$apiKey&locale_lang=ko&feed_variant=default_spocs_off\",\"stories_referrer\":\"https://getpocket.com/recommendations\",\"topics_endpoint\":\"https://getpocket.cdn.mozilla.net/v3/firefox/trending-topics?version=2&consumer_key=$apiKey&locale_lang=ko\",\"show_spocs\":false}",
+			"feeds.topsites": true,
+			"hideTopSitesTitle": false,
+			"showSponsored": true,
+			"system.showSponsored": false,
+			"showSponsoredTopSites": true,
+			"pocketCta": "{\"cta_button\":\"\",\"cta_text\":\"\",\"cta_url\":\"\",\"use_cta\":false}",
+			"showSearch": true,
+			"topSitesRows": 1,
+			"telemetry": true,
+			"telemetry.ut.events": false,
+			"telemetry.structuredIngestion.endpoint": "https://incoming.telemetry.mozilla.org/submit",
+			"section.highlights.includeVisited": true,
+			"section.highlights.includeBookmarks": true,
+			"section.highlights.includePocket": true,
+			"section.highlights.includeDownloads": true,
+			"section.highlights.rows": 1,
+			"section.topstories.rows": 1,
+			"sectionOrder": "topsites,topstories,highlights",
+			"improvesearch.noDefaultSearchTile": true,
+			"improvesearch.topSiteSearchShortcuts.searchEngines": "google",
+			"improvesearch.topSiteSearchShortcuts.havePinned": "",
+			"asrouter.devtoolsEnabled": false,
+			"asrouter.providers.onboarding": "{\"id\":\"onboarding\",\"type\":\"local\",\"localProvider\":\"OnboardingMessageProvider\",\"enabled\":true,\"exclude\":[]}",
+			"discoverystream.flight.blocks": "{}",
+			"discoverystream.config": "{\"api_key_pref\":\"extensions.pocket.oAuthConsumerKey\",\"collapsible\":true,\"enabled\":true}",
+			"discoverystream.endpoints": "https://getpocket.cdn.mozilla.net/,https://firefox-api-proxy.cdn.mozilla.net/,https://spocs.getpocket.com/,https://spocs.mozilla.net/",
+			"discoverystream.isCollectionDismissible": true,
+			"discoverystream.onboardingExperience.dismissed": false,
+			"discoverystream.region-basic-layout": false,
+			"discoverystream.spoc.impressions": "{}",
+			"discoverystream.endpointSpocsClear": "https://spocs.mozilla.net/user",
+			"discoverystream.rec.impressions": "{}",
+			"showRecentSaves": true,
+			"feeds.aboutpreferences": true,
+			"feeds.newtabinit": true,
+			"feeds.places": true,
+			"feeds.prefs": true,
+			"feeds.sections": true,
+			"feeds.section.highlights": false,
+			"feeds.system.topstories": false,
+			"feeds.systemtick": true,
+			"feeds.telemetry": true,
+			"feeds.favicon": true,
+			"feeds.system.topsites": true,
+			"feeds.recommendationprovider": true,
+			"feeds.discoverystreamfeed": true,
+			"isPrivateBrowsingEnabled": true,
+			"platform": "linux",
+			"region": "KR",
+			"fxa_endpoint": "https://accounts.firefox.com/",
+			"appUpdateChannel": "release",
+			"improvesearch.topSiteSearchShortcuts": true,
+			"mayHaveSponsoredTopSites": true,
+			"improvesearch.handoffToAwesomebar": true,
+			"featureConfig": {
+				"customizationMenuEnabled": null,
+				"topSitesContileEnabled": true
+			},
+			"pocketConfig": {
+				"spocPositions": "1,5,7,11,18,20",
+				"spocTopsitesPositions": "2",
+				"contileTopsitesPositions": "0,1",
+				"spocAdTypes": "",
+				"spocZoneIds": "",
+				"spocTopsitesAdTypes": "",
+				"spocTopsitesZoneIds": "",
+				"spocTopsitesPlacementEnabled": true,
+				"spocSiteId": "",
+				"widgetPositions": "",
+				"hybridLayout": false,
+				"hideCardBackground": false,
+				"fourCardLayout": false,
+				"newFooterSection": false,
+				"saveToPocketCard": true,
+				"saveToPocketCardRegions": "",
+				"hideDescriptions": false,
+				"hideDescriptionsRegions": "",
+				"compactGrid": false,
+				"compactImages": false,
+				"imageGradient": false,
+				"titleLines": 3,
+				"descLines": 3,
+				"onboardingExperience": false,
+				"essentialReadsHeader": false,
+				"editorsPicksHeader": false,
+				"recentSavesEnabled": false,
+				"readTime": true,
+				"newSponsoredLabel": false,
+				"sendToPocket": true,
+				"recsPersonalized": false,
+				"spocsPersonalized": true,
+				"spocsCacheTimeout": null,
+				"regionStoriesConfig": "US,DE,CA,GB,IE,CH,AT,BE,IN,FR,IT,ES",
+				"regionBffConfig": "US,DE,CA,GB,IE,CH,AT,BE,IN,FR,IT,ES",
+				"regionStoriesBlock": "",
+				"localeListConfig": "",
+				"regionSpocsConfig": "US,CA,DE,GB,FR,IT,ES",
+				"topSitesContileSovEnabled": true,
+				"spocsClearEndpoint": "https://spocs.mozilla.net/user",
+				"spocsEndpoint": "https://spocs.mozilla.net/spocs",
+				"spocsEndpointAllowlist": "https://getpocket.cdn.mozilla.net/,https://firefox-api-proxy.cdn.mozilla.net/,https://spocs.getpocket.com/,https://spocs.mozilla.net/"
+			},
+			"logowordmark.alwaysVisible": true,
+			"feeds.section.topstories": true,
+			"discoverystream.enabled": true,
+			"discoverystream.sponsored-collections.enabled": false,
+			"discoverystream.hardcoded-basic-layout": false,
+			"discoverystream.personalization.enabled": true,
+			"discoverystream.personalization.override": false,
+			"discoverystream.personalization.modelKeys": "nb_model_arts_and_entertainment, nb_model_autos_and_vehicles, nb_model_beauty_and_fitness, nb_model_blogging_resources_and_services, nb_model_books_and_literature, nb_model_business_and_industrial, nb_model_computers_and_electronics, nb_model_finance, nb_model_food_and_drink, nb_model_games, nb_model_health, nb_model_hobbies_and_leisure, nb_model_home_and_garden, nb_model_internet_and_telecom, nb_model_jobs_and_education, nb_model_law_and_government, nb_model_online_communities, nb_model_people_and_society, nb_model_pets_and_animals, nb_model_real_estate, nb_model_reference, nb_model_science, nb_model_shopping, nb_model_sports, nb_model_travel",
+			"discoverystream.spocs-endpoint": "https://spocs.mozilla.net/spocs",
+			"discoverystream.spocs-endpoint-query": "",
+			"newNewtabExperience.colors": "#0090ED,#FF4F5F,#2AC3A2,#FF7139,#A172FF,#FFA437,#FF2A8A"
+		}
+	},
+	"Dialog": {
+		"visible": false,
+		"data": {}
+	},
+	"Sections": [
+		{
+			"title": {
+				"id": "newtab-section-header-pocket",
+				"values": {
+					"provider": "Pocket"
+				}
+			},
+			"rows": [],
+			"enabled": false,
+			"id": "topstories",
+			"pref": {
+				"titleString": {
+					"id": "home-prefs-recommended-by-header",
+					"values": {
+						"provider": "Pocket"
+					}
+				},
+				"descString": {
+					"id": "home-prefs-recommended-by-description-new",
+					"values": {
+						"provider": "Pocket"
+					}
+				},
+				"nestedPrefs": [],
+				"learnMore": {
+					"link": {
+						"href": "https://getpocket.com/firefox/new_tab_learn_more",
+						"id": "home-prefs-recommended-by-learn-more"
+					}
+				},
+				"collapsed": false,
+				"feed": "feeds.section.topstories"
+			},
+			"shouldHidePref": true,
+			"eventSource": "TOP_STORIES",
+			"icon": "chrome://global/skin/icons/pocket.svg",
+			"learnMore": {
+				"link": {
+					"href": "https://getpocket.com/firefox/new_tab_learn_more",
+					"message": {
+						"id": "newtab-pocket-learn-more"
+					}
+				}
+			},
+			"compactCards": false,
+			"rowsPref": "section.topstories.rows",
+			"maxRows": 4,
+			"availableLinkMenuOptions": [
+				"CheckBookmarkOrArchive",
+				"CheckSavedToPocket",
+				"Separator",
+				"OpenInNewWindow",
+				"OpenInPrivateWindow",
+				"Separator",
+				"BlockUrl"
+			],
+			"emptyState": {
+				"message": {
+					"id": "newtab-empty-section-topstories",
+					"values": {
+						"provider": "Pocket"
+					}
+				},
+				"icon": "check"
+			},
+			"shouldSendImpressionStats": true,
+			"dedupeFrom": [
+				"highlights"
+			],
+			"options": {
+				"api_key_pref": "extensions.pocket.oAuthConsumerKey",
+				"hidden": true,
+				"provider_icon": "chrome://global/skin/icons/pocket.svg",
+				"provider_name": "Pocket",
+				"read_more_endpoint": "https://getpocket.com/explore/trending?src=fx_new_tab",
+				"stories_endpoint": "https://getpocket.cdn.mozilla.net/v3/firefox/global-recs?version=3&consumer_key=$apiKey&locale_lang=ko&feed_variant=default_spocs_off",
+				"stories_referrer": "https://getpocket.com/recommendations",
+				"topics_endpoint": "https://getpocket.cdn.mozilla.net/v3/firefox/trending-topics?version=2&consumer_key=$apiKey&locale_lang=ko",
+				"show_spocs": false
+			},
+			"contextMenuOptions": [
+				"CheckBookmarkOrArchive",
+				"CheckSavedToPocket",
+				"Separator",
+				"OpenInNewWindow",
+				"OpenInPrivateWindow",
+				"Separator",
+				"BlockUrl"
+			],
+			"initialized": false
+		},
+		{
+			"title": {
+				"id": "newtab-section-header-recent-activity"
+			},
+			"rows": [],
+			"enabled": false,
+			"id": "highlights",
+			"pref": {
+				"titleString": {
+					"id": "home-prefs-recent-activity-header"
+				},
+				"descString": {
+					"id": "home-prefs-recent-activity-description"
+				},
+				"nestedPrefs": [
+					{
+						"name": "section.highlights.includeVisited",
+						"titleString": "home-prefs-highlights-option-visited-pages"
+					},
+					{
+						"name": "section.highlights.includeBookmarks",
+						"titleString": "home-prefs-highlights-options-bookmarks"
+					},
+					{
+						"name": "section.highlights.includeDownloads",
+						"titleString": "home-prefs-highlights-option-most-recent-download"
+					},
+					{
+						"name": "section.highlights.includePocket",
+						"titleString": "home-prefs-highlights-option-saved-to-pocket",
+						"hidden": false
+					}
+				],
+				"collapsed": false,
+				"feed": "feeds.section.highlights"
+			},
+			"shouldHidePref": false,
+			"eventSource": "HIGHLIGHTS",
+			"icon": "chrome://global/skin/icons/highlights.svg",
+			"compactCards": true,
+			"rowsPref": "section.highlights.rows",
+			"maxRows": 4,
+			"emptyState": {
+				"message": {
+					"id": "newtab-empty-section-highlights"
+				},
+				"icon": "chrome://global/skin/icons/highlights.svg"
+			},
+			"shouldSendImpressionStats": false,
+			"options": {},
+			"initialized": false
+		}
+	],
+	"Pocket": {
+		"isUserLoggedIn": null,
+		"pocketCta": {},
+		"waitingForSpoc": true
+	},
+	"Personalization": {
+		"lastUpdated": null,
+		"initialized": false
+	},
+	"DiscoveryStream": {
+		"config": {
+			"api_key_pref": "extensions.pocket.oAuthConsumerKey",
+			"collapsible": true,
+			"enabled": true
+		},
+		"layout": [
+			{
+				"width": 12,
+				"components": [
+					{
+						"type": "TopSites",
+						"header": {
+							"title": {
+								"id": "newtab-section-header-topsites"
+							}
+						},
+						"placement": {
+							"name": "sponsored-topsites",
+							"ad_types": [
+								3120
+							],
+							"zone_ids": [
+								280143
+							]
+						},
+						"spocs": {
+							"probability": 1,
+							"prefs": [
+								"showSponsoredTopSites"
+							],
+							"positions": [
+								{
+									"index": 2
+								}
+							]
+						},
+						"properties": {}
+					},
+					{
+						"type": "Message",
+						"essentialReadsHeader": false,
+						"editorsPicksHeader": false,
+						"header": {
+							"title": {
+								"id": "newtab-section-header-pocket",
+								"values": {
+									"provider": "Pocket"
+								}
+							},
+							"subtitle": "",
+							"link_text": {
+								"id": "newtab-pocket-learn-more"
+							},
+							"link_url": "https://getpocket.com/firefox/new_tab_learn_more",
+							"icon": "chrome://global/skin/icons/pocket.svg"
+						},
+						"properties": {},
+						"styles": {
+							".ds-message": "margin-bottom: -20px"
+						}
+					},
+					{
+						"type": "CardGrid",
+						"properties": {
+							"items": 21,
+							"hybridLayout": false,
+							"hideCardBackground": false,
+							"fourCardLayout": false,
+							"compactGrid": false,
+							"essentialReadsHeader": false,
+							"editorsPicksHeader": false,
+							"onboardingExperience": false
+						},
+						"widgets": {
+							"positions": [],
+							"data": []
+						},
+						"cta_variant": "link",
+						"header": {
+							"title": ""
+						},
+						"placement": {
+							"name": "spocs",
+							"ad_types": [
+								3617
+							],
+							"zone_ids": [
+								217758,
+								217995
+							]
+						},
+						"feed": {
+							"embed_reference": null,
+							"url": "https://getpocket.cdn.mozilla.net/v3/firefox/global-recs?version=3&consumer_key=$apiKey&locale_lang=$locale&region=$region&count=30"
+						},
+						"spocs": {
+							"probability": 1,
+							"positions": [
+								{
+									"index": 1
+								},
+								{
+									"index": 5
+								},
+								{
+									"index": 7
+								},
+								{
+									"index": 11
+								},
+								{
+									"index": 18
+								},
+								{
+									"index": 20
+								}
+							]
+						}
+					},
+					{
+						"type": "Navigation",
+						"newFooterSection": false,
+						"properties": {
+							"alignment": "left-align",
+							"links": [
+								{
+									"name": "Self improvement",
+									"url": "https://getpocket.com/explore/self-improvement?utm_source=pocket-newtab"
+								},
+								{
+									"name": "Food",
+									"url": "https://getpocket.com/explore/food?utm_source=pocket-newtab"
+								},
+								{
+									"name": "Entertainment",
+									"url": "https://getpocket.com/explore/entertainment?utm_source=pocket-newtab"
+								},
+								{
+									"name": "Health & fitness",
+									"url": "https://getpocket.com/explore/health?utm_source=pocket-newtab"
+								},
+								{
+									"name": "Science",
+									"url": "https://getpocket.com/explore/science?utm_source=pocket-newtab"
+								},
+								{
+									"name": "More recommendations â€º",
+									"url": "https://getpocket.com/explore?utm_source=pocket-newtab"
+								}
+							],
+							"extraLinks": [
+								{
+									"name": "Career",
+									"url": "https://getpocket.com/explore/career?utm_source=pocket-newtab"
+								},
+								{
+									"name": "Technology",
+									"url": "https://getpocket.com/explore/technology?utm_source=pocket-newtab"
+								}
+							],
+							"privacyNoticeURL": {
+								"url": "https://www.mozilla.org/privacy/firefox/#recommend-relevant-content",
+								"title": {
+									"id": "newtab-section-menu-privacy-notice"
+								}
+							}
+						},
+						"header": {
+							"title": {
+								"id": "newtab-pocket-read-more"
+							}
+						},
+						"styles": {
+							".ds-navigation": "margin-top: -10px;"
+						}
+					}
+				]
+			}
+		],
+		"isPrivacyInfoModalVisible": false,
+		"isCollectionDismissible": true,
+		"feeds": {
+			"data": {},
+			"loaded": false
+		},
+		"spocs": {
+			"spocs_endpoint": "https://spocs.mozilla.net/spocs",
+			"lastUpdated": 1708569407780,
+			"data": {
+				"settings": {
+					"feature_flags": {
+						"spoc_v2": true,
+						"collections": false
+					},
+					"spocsPerNewTabs": 1,
+					"domainAffinityParameterSets": {
+						"default": {
+							"recencyFactor": 0.5,
+							"frequencyFactor": 0.5,
+							"combinedDomainFactor": 0.5,
+							"perfectFrequencyVisits": 10,
+							"perfectCombinedDomainScore": 2,
+							"multiDomainBoost": 0,
+							"itemScoreFactor": 1
+						},
+						"fully-personalized": {
+							"recencyFactor": 0.5,
+							"frequencyFactor": 0.5,
+							"combinedDomainFactor": 0.5,
+							"perfectFrequencyVisits": 10,
+							"perfectCombinedDomainScore": 2,
+							"itemScoreFactor": 0.01,
+							"multiDomainBoost": 0
+						},
+						"fully-personalized-domains": {
+							"recencyFactor": 0.5,
+							"frequencyFactor": 0.5,
+							"combinedDomainFactor": 0.5,
+							"perfectFrequencyVisits": 1,
+							"perfectCombinedDomainScore": 10,
+							"itemScoreFactor": 0.01,
+							"multiDomainBoost": 0
+						}
+					},
+					"timeSegments": [
+						{
+							"id": "week-1",
+							"startTime": 432000,
+							"endTime": 0,
+							"weightPosition": 1
+						},
+						{
+							"id": "week-2",
+							"startTime": 864000,
+							"endTime": 432000,
+							"weightPosition": 1
+						},
+						{
+							"id": "week-3",
+							"startTime": 1296000,
+							"endTime": 864000,
+							"weightPosition": 1
+						},
+						{
+							"id": "week-4",
+							"startTime": 1728000,
+							"endTime": 1296000,
+							"weightPosition": 1
+						},
+						{
+							"id": "week-5",
+							"startTime": 2160000,
+							"endTime": 1728000,
+							"weightPosition": 1
+						},
+						{
+							"id": "week-6",
+							"startTime": 2592000,
+							"endTime": 2160000,
+							"weightPosition": 1
+						}
+					]
+				},
+				"sponsored-topsites": {
+					"title": "",
+					"context": "",
+					"items": []
+				}
+			},
+			"loaded": true,
+			"frequency_caps": [],
+			"blocked": [],
+			"placements": [
+				{
+					"name": "sponsored-topsites",
+					"ad_types": [
+						3120
+					],
+					"zone_ids": [
+						280143
+					]
+				}
+			]
+		},
+		"experimentData": {
+			"utmSource": "pocket-newtab",
+			"utmCampaign": "spocs-endpoint-rollout-release",
+			"utmContent": "control"
+		},
+		"recentSavesData": [],
+		"isUserLoggedIn": false,
+		"recentSavesEnabled": false,
+		"pocketButtonEnabled": true,
+		"saveToPocketCard": true,
+		"hideDescriptions": false,
+		"compactImages": false,
+		"imageGradient": false,
+		"newSponsoredLabel": false,
+		"titleLines": 3,
+		"descLines": 3,
+		"readTime": true
+	},
+	"Search": {
+		"fakeFocus": false,
+		"hide": false
+	}
+};
+
+›cÁºðð           eÖ³DF–Õÿÿÿÿ       :about:home alt-data 1;19449,script version 20240214103141   ú
