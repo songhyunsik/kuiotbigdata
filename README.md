@@ -47,7 +47,18 @@ C/C++ database arduino...
     - select.sql
   - 3차 내용 추가
     - 셀렉트 쓰는 방법
-[EOF]
+- 2장 데이터베이스 모델 진행.
+- 3장 group by 165p까지 진행
+  - 윈도우 DBMS를 우분투에서 연결
+  - 윈도우 DBMS에 외부 IP 접근 가능한 user 생성
+  - 윈도우 방화벽에 3360 포트 열기
+  - 윈도우 DBMS에 임의의 데이터 넣고 우분투에 확인.
+- 우분투 DBMS를 위도우에서 연결
+  - 우분투 DBMS에 외부 IP접근 가능한 user 접근 가능한 user 생성
+  - 우분투 방화벽에 전체 포트 열기
+  - 우분투 DBMS에 임의의 데이터 넣고 윈도우에서 확인
+
+
 
 ```shell
 sudo apt get install git

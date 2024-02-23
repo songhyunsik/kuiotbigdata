@@ -1,3 +1,4 @@
+use madangdb;
 -- example 3-1
 select bookname, price from Book;
 
@@ -43,4 +44,30 @@ select * from Book order by bookname desc;
 -- example 3-14
 select* from Book order by price desc, publisher asc;
 
--- example 3-15
+-- select * from R1 where (A = 'a1') or (A = 'a2');
+
+-- example 3-15 3-16
+select * from Orders;
+select sum(saleprice) 총판매액 from Orders;
+select sum(saleprice) 총매출 from Orders where custid=2;
+
+-- example 3-15 3-17
+select sum(saleprice),
+    avg(saleprice) 평균,
+    min(saleprice) 최소값,
+    max(saleprice) 최댓값
+from Orders;
+
+-- example 3-18
+select count(*) from Orders;
+
+select count(*) from Customer;
+select count(phone) from Customer;
+
+select saleprice, count(*) from Orders;
+
+-- example 3-19
+select sum(saleprice) 총매출, count(*) 권수 from Orders group by custid;
+select sum(saleprice) 총매출, count(*) 권수 from Orders where saleprice >= 8000 group by custid having count(*) >= 2;
+
+-- example 
