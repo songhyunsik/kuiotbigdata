@@ -75,7 +75,6 @@ C/C++ database arduino...
 
 
 
-
 ```shell
 sudo apt get install git
 git clone https://github.com/songhyunsik/kuiotbigdata.git
