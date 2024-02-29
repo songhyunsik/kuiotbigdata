@@ -57,6 +57,10 @@ C/C++ database arduino...
   - 우분투 DBMS에 외부 IP접근 가능한 user 접근 가능한 user 생성
   - 우분투 방화벽에 전체 포트 열기
   - 우분투 DBMS에 임의의 데이터 넣고 윈도우에서 확인
+
+---
+## 2024-02-29
+---
   - 빌드 과정 설명
   - make cmake for linux
   - 전처리 어셈블리 바이너리 링크
