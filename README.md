@@ -2,7 +2,7 @@
 C/C++ database arduino...
 
 ---
-## 2024-02-22
+## 2024-02-22(DBMS)
 ---
 
 - 개요
@@ -31,7 +31,7 @@ C/C++ database arduino...
 - 데이터 조작어
 
 ---
-## 2024-02-23
+## 2024-02-23(DBMS)
 ---
 
 - mysql unbuntu 문제 해결
@@ -59,7 +59,7 @@ C/C++ database arduino...
   - 우분투 DBMS에 임의의 데이터 넣고 윈도우에서 확인
 
 ---
-## 2024-02-29
+## 2024-02-29(DBMS)
 ---
   - 빌드 과정 설명
     - make cmake for linux
@@ -81,29 +81,31 @@ C/C++ database arduino...
     - 날짜 함수 // str_to_date, date_format, adddate, sysdate else. // format gudtlr %Y, %m, %d else.
 
 ---
-## 2024-03-04
+## 2024-03-04(C)
 ---
 Array //finMaxinArray else.
 
 ---
-## 2024-03-05
+## 2024-03-05(C)
 ---
 포인터 사용
 
 ---
-## 2024-03-06
+## 2024-03-06(C)
 ---
 포인터를 왜 사용하는가
 - 함수 //swap, selectionSorting else.
 
 ---
-## 2024-03-07
+## 2024-03-07(DBMS)
 ---
  - delete 다시 시도
-    - view 배우기
+ - view 배우기
     - 생성
     - 수정
     - 삭제
+- index 배우기
+    - 
 
 
 ```shell
