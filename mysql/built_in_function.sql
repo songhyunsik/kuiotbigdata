@@ -113,3 +113,4 @@ from (select custid, name
         where custid <= 2) cs, Orders 
 where cs.custid = Orders.custid
 group by cs.name; 
+
