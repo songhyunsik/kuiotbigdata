@@ -100,14 +100,28 @@ Array //finMaxinArray else.
 ## 2024-03-07(DBMS)
 ---
  - delete 다시 시도
- 
+    show tables;
+    set sql_safe_updates=0;
+    delete from Customer where PK=10;
+
+    set foreign_key_checks=1;
+    delete from customer;
+
+    select * from information_schema.table_constraints
+    where table_name like 'Orders';
+
+    alter table Orders drop foreign key Orders_ibfx_1;
+    (오류떠서 재시도 해야함)
+
  - view 배우기
-    - 생성
-    - 수정
-    - 삭제
+    - 생성 // create view vw_Book, create view vw_Customer, create view vw_Orders
+    - 수정 // create or replace view vw_Customer
+    - 삭제 // drop view vw_Customer;
 
 - index 배우기
-    - 
+    - 생성 // create index Ix_book_1, create index Ix_book_2
+    - 수정 // 
+    - 삭제 // drop index ix_book_1 on Book;
 
 
 ```shell
