@@ -100,10 +100,12 @@ Array //finMaxinArray else.
 ## 2024-03-07(DBMS)
 ---
  - delete 다시 시도
+ 
  - view 배우기
     - 생성
     - 수정
     - 삭제
+
 - index 배우기
     - 
 
