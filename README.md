@@ -113,6 +113,14 @@ Array //finMaxinArray else.
     - alter table Orders drop foreign key Orders_ibfx_1;
     - (오류떠서 재시도 해야함)
 
+- 부속질의
+    - select 부속질의 (스칼라 부속질의)
+    - from 부속질의 ( 인라인 뷰)
+    - where 부속질의
+    - 단일 - 비교 ( =, >, <, >=, <=, !=, <>, is null, is not null) [비교]
+    - 다수의 열, 단일 행 ( all, some, any) [한정]
+    - 다수의 행, 다수의 열 ( in, not in, exists, not exists)[집합, 존재]
+
  - view 배우기
     - 생성 // create view vw_Book, create view vw_Customer, create view vw_Orders
     - 수정 // create or replace view vw_Customer
@@ -120,8 +128,20 @@ Array //finMaxinArray else.
 
 - index 배우기
     - 생성 // create index Ix_book_1, create index Ix_book_2
-    - 수정 // 
+    - 재구성 // analyze table 테이블이름
     - 삭제 // drop index ix_book_1 on Book;
+
+- 데이터베이스 프로그래밍 배우기
+    - 저장프로그램 // procedure, routine, trigger, function else.
+    - Book에 INSERT문을 사용하여 (데이터를 삽입) 프로시저를 작성함. // CREATE-PROCEDURE-BEGIN-END // OUT: 출력 인자
+    - 제어문을 사용하는 프로시저 // BEGIN-END문, IF-ELSE문, WHILE 문, RUTURN 문 등
+    - 결과를 반환하는 프로시저 // 인자 타입 - OUT
+    - 커서를 사용하는 프로시저 // CURSOR, OPEN, FETCH, CLOSE 등
+    - 트리거 // INSERT, DELETE, UPDATE이 실핼될 때 자동으로 같이 실행되는 프로시저이다. // Book_log
+    - 사용자 정의 함수// CALL // fnc_Interest // GLOBAL log_bin_trust_function_creators = ON; -> function 생성
+    - 저장 프로그램의 문법 요약
+    - 2장 진도 완료
+
 
 
 ```shell

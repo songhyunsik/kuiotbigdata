@@ -8,4 +8,4 @@ select * from Book;
 
 drop index ix_book_1 on Book;
 
-analyse 
+analyze table Book;
