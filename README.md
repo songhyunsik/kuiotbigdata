@@ -142,6 +142,36 @@ Array //finMaxinArray else.
     - 저장 프로그램의 문법 요약
     - 2장 진도 완료
 
+---
+## 2024-03-08(DBMS)
+---
+
+- python_C_mysql
+    - .vscod 파일 만들기
+        - c_cpp_properties.json / settings.json
+    - 파이썬 연동
+        - cmake파일 만들기 / CMakeLists.txt 작성
+        - mkdir build && cd build
+        - cmake ..
+        - make
+        - ./실행파일 / booklist
+        - booklist를 이용하여 테이블 Book 자료 출력
+- madangweb
+    - madangdb 연결하기
+    - cursor 등 활용하기
+    - web에 연결하여 Firfox에서 확인하기
+
+- VsCode 디버깅 설정
+
+- flaskweb
+    - pip install flask를 다운기
+    - sudo apt install python3-flask를 다운
+    - app.py 작성
+    - python3 app.py
+    - 브라우저에서 localhost:5000 접속
+    - flask run을 하여 madangweb에 있는 Book 확인하기
+
+
 
 
 ```shell
