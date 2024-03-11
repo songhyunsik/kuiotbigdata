@@ -208,6 +208,24 @@ Array //finMaxinArray else.
 
 - 데이터베이스 TEST 시험 진행
 
+---
+## 2024-03-11(C)
+---
+
+- 구조체(structure)
+- 사용자 정의 자료형(user-defined type)
+- 복합형(compund type)
+- testDate 실습
+- mkdir date/
+    - main.c
+    - date.h
+    - date.c
+    - 분리해서 실습
+- mkdir processScore/
+    - main.c
+    - score.dot
+    - 입출력칸 분리해서 실습
+- name.c // 문자열 배운 후, 사용방법 실습
 
 ```shell
 sudo apt get install git
