@@ -227,6 +227,11 @@ Array //finMaxinArray else.
     - 입출력칸 분리해서 실습
 - name.c // 문자열 배운 후, 사용방법 실습
 
+- 문자열 배열 배움 / 실습
+    - stringArray.c
+    - sumMatrix.c
+    - testString.c
+
 ```shell
 sudo apt get install git
 git clone https://github.com/songhyunsik/kuiotbigdata.git
