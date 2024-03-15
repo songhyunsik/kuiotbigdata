@@ -232,6 +232,15 @@ Array //finMaxinArray else.
     - sumMatrix.c
     - testString.c
 
+---
+## 2024-03-15(C)
+---
+
+- strcat
+- strcpy
+- strcmp
+- strlen
+
 ```shell
 sudo apt get install git
 git clone https://github.com/songhyunsik/kuiotbigdata.git

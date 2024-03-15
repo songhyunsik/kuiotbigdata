@@ -72,7 +72,8 @@
         "cinttypes": "cpp",
         "typeindex": "cpp",
         "typeinfo": "cpp",
-        "mysql.h": "c"
+        "mysql.h": "c",
+        "mystring.h": "c"
     },
     //cmake source folder
     "cmake.sourceDirectory": "/home/jhw0222/kuiotbigdata/python_C_mysql",
