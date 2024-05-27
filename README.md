@@ -1,10 +1,9 @@
+--
 # kuiotbigdata
 C/C++ database arduino...
-
 ---
 ### 2024-02-22(DBMS)
 ---
-
 - 개요
 - google slides
 - github sign up
@@ -29,11 +28,9 @@ C/C++ database arduino...
     - grant all privilages on*.* to 'root'@'localhost' identified by '1234';
   - windows cli에서 testDB 생성하기 -p[ECF]
 - 데이터 조작어
-
 ---
 ### 2024-02-23(DBMS)
 ---
-
 - mysql unbuntu 문제 해결
 - user를 새로 만들어서 권한을 주어 봤지만 해결되지 않았음.
 - 권한 설정 및 user create 시
@@ -57,7 +54,6 @@ C/C++ database arduino...
   - 우분투 DBMS에 외부 IP접근 가능한 user 접근 가능한 user 생성
   - 우분투 방화벽에 전체 포트 열기
   - 우분투 DBMS에 임의의 데이터 넣고 윈도우에서 확인
-
 ---
 ### 2024-02-29(DBMS)
 ---
@@ -79,23 +75,19 @@ C/C++ database arduino...
     - 숫자함수 // abs, ceil, floor, round, sign else.
     - 문자열 함수 // concat, replace, substr, length else.
     - 날짜 함수 // str_to_date, date_format, adddate, sysdate else. // format gudtlr %Y, %m, %d else.
-
 ---
 ### 2024-03-04(C)
 ---
 Array //finMaxinArray else.
-
 ---
 ### 2024-03-05(C)
 ---
 포인터 사용
-
 ---
 ### 2024-03-06(C)
 ---
 포인터를 왜 사용하는가
 - 함수 //swap, selectionSorting else.
-
 ---
 ### 2024-03-07(DBMS)
 ---
@@ -141,11 +133,9 @@ Array //finMaxinArray else.
     - 사용자 정의 함수// CALL // fnc_Interest // GLOBAL log_bin_trust_function_creators = ON; -> function 생성
     - 저장 프로그램의 문법 요약
     - 2장 진도 완료
-
 ---
 ### 2024-03-08(DBMS)
 ---
-
 - python_C_mysql
     - .vscod 파일 만들기
         - c_cpp_properties.json / settings.json
@@ -207,11 +197,9 @@ Array //finMaxinArray else.
     - 데드락 발생 조건
 
 - 데이터베이스 TEST 시험 진행
-
 ---
 ### 2024-03-11(C)
 ---
-
 - 구조체(structure)
 - 사용자 정의 자료형(user-defined type)
 - 복합형(compund type)
@@ -231,11 +219,9 @@ Array //finMaxinArray else.
     - stringArray.c
     - sumMatrix.c
     - testString.c
-
 ---
 ### 2024-03-15(C)
 ---
-
 - strcat
 - strcpy
 - strcmp
@@ -243,16 +229,16 @@ Array //finMaxinArray else.
 
 sudo apt get install git
 git clone https://github.com/songhyunsik/kuiotbigdata.git
-
 ---
 # c_src
+---
 C언어 예제 저장용 깃허브
-
 - 고려대 git으로 합침.
 ---
 # c++ 수업
 ---
 ### 2024-03-26
+---
 - B <directory>       	Add <directory> to the compiler's search paths.
   -v                   	Display the programs invoked by the compiler.
   -###                 	Like -v but options quoted and commands not executed.
@@ -277,36 +263,40 @@ C언어 예제 저장용 깃허브
 - operator, switch~case, while, for
 ---
 ### 2024-03-28
-
+---
 - function, array, pointer, quiz_15
 
 - MSB: 최상위 비트
 - LSB: 최하위 비트
 ---
 ### 2024-03-29
-
+---
 - 연습문제로 연습
 
 - **배열은 0번이 주소값
 ---
 ### 2024-04-01
+---
 - https://modoocode.com/76
 ---
 ### 2024-04-02
-
+---
 - 클래스
 - 선언
 - 구현
 ---
 ### 2024-03-26
+---
 - 연습 문제 7번 해결
 ---
 ### 2024-03-26
+---
 - 연습문제 8번
 - char ch[10]; → scanf에서 다운받을 때
 - char *pch; → 공간을 만들어줄때
 ---
 ### 2024-04-11
+---
 - 프렌드 함수 진도
     - -> 프렌드를 사용하면 다른 함수에서도 접근할 수 있다.
 
@@ -327,7 +317,7 @@ C언어 예제 저장용 깃허브
     - bool operator==(Power op2);을 만들어, a, b의 값이 동일한지 비교한다. 이후 참인지 거짓인지 판별하여 리턴한다.
 ---
 ### 2024-04-12
-
+---
 - 상속 진도
 
 - 상속과 객체 포인터
@@ -337,15 +327,17 @@ C언어 예제 저장용 깃허브
 - C++ 수업 마무리
 ---
 # TCP_IP_SRC
-
-### 2024/04/18
-
+---
+### 2024-04-18
+---
 - client: connect(요청함)
 - server: listen(요청을 기다림) - 요청을 받을 수도, 거절할 수 도 있음
 - sudo chmod 777 data txt - 파일의 권한을 변경할 때 사용한다.
 ---
 # OpenCV
-### 2024/05/03
+---
+### 2024-05-03
+---
 - OpenCV 설치와 기초 사용법
     - 데비안 설치 --> [sudo apt update / sudo apt install libopencv-dev python3-opencv]
 
@@ -382,6 +374,10 @@ C언어 예제 저장용 깃허브
         - line() 함수
         - arrowedLine 함수
         - drawMarker 함수
+---
+### 2024-05-07
+---
+- CH04_OpenCV 주요 기능
     - 도형 그리기
         - rectangle 함수
         - circle 함수
@@ -406,6 +402,11 @@ C언어 예제 저장용 깃허브
         - normalize() 함수
         - cvRound() 함수
 - CH05 영상의 밝기와 명암비 조절
+  - saturated cast 예제
+---
+### 2024-05-08
+---
+- CH05 영상의 밝기와 명암비 조절
     - 불러오기 IMREAD_GRAYSCALE 불러오기
     - 변환하기 cvtColor() 함수를 사용한다.
     - -> 최대값과 최소값이 존재한다. 일반적으로 0~255
@@ -416,7 +417,9 @@ C언어 예제 저장용 깃허브
     - 히스토그램 평활화(histogram equalization): 영상의 대비를 개선하기 위해 사용.  
 ---
 # Python_Programming
-
+---
+### 2024-05-21
+---
 ### CHAPTER 2
 - Python 수업 시작
 - Miniconda 설치
@@ -445,6 +448,10 @@ C언어 예제 저장용 깃허브
 
 ### CHAPTER 4
 - [1] 조건문
+---
+### 2024-05-22
+---
+### CHAPTER 4
 - [3] 반복문 
 
 ### CHAPTER 5
@@ -476,6 +483,9 @@ C언어 예제 저장용 깃허브
 - [1] 문자열의 이해
 - [2] 함수 심화
 
+---
+### 2024-05-23
+---
 ### CHAPTER 7
 
 ### CHAPTER 8
@@ -508,5 +518,82 @@ C언어 예제 저장용 깃허브
         - class  /  SoccerPlayer(object):
         - 클래스 예약어 / 클래스 이름(상속받는 객체명)
         - 속성의 선언: 속성에 대한 정보를 선언하기 위해서는 __init__()라는 예약 함수를 사용한다. 앞서 말한 예약함수가 대표적인 것이고, 이 외에 __str__, __add__ 등이 있다
+---
+### 2024-05-24
+---
+- 모듈과 패키지
+  - 모듈
+    - 파이썬 파일
+    - import 모듈이름
+    - from 모듈이름 import 함수이름
+    - import 모듈이름 as 별칭
+    - name 변수
+  - 패키지
+    - 모듈을 모아놓은 디렉토리
+    - init.py 파일
+    - all 변수
+    - from 패키지이름 import 모듈이름
+    - from 패키지이름.모듈이름 import 함수이름
+    - from 패키지이름.모듈이름 import *
+  - 패키지 만들기
+    - roboadvisor 패키지 만들기
+      - roboadvisor 디렉토리 만들기
+      - init.py 파일 만들기
+    - sub 패키지 만들기
+      - crawling 디렉토리 만들기
+      - init.py 파일 만들기
+      - database 디렉토리 만들기
+      - init.py 파일 만들기
+      - analysis 디렉토리 만들기
+      - init.py 파일 만들기
+    - 메타 데이터 넣기
+      - init.py 파일에 version 변수 추가
+    - 패키지 네임스페이스 설정
+- 예외 처리와 파일 다루기
+  - 예외 처리
+    - try, except, else, finally
+    - raise
+    - assert
+    - Exception 클래스
+      - 상속 받아서 사용자 정의 예외 처리
+    - 파일 다루기
+      - open, close
+      - read, write
+      - readline, readlines
+      - with
+        - close 없이 파일을 다루기
+      - pickle
+        - 객체를 바로 저장 가능, 여러개의 객체도 저장 가능
+- 로그 관리
+  - logging
+    - 로그 레벨
+    - 로그 포맷
+    - 로그 파일
+    - 로그 핸들러
+    - 로그 필터
+    - 로그 포맷터
+  - ogging 환경 변수 설정 및 이용
+    - 환경 변수 설정
+    - configparser
+    - argparse
+    - logging.config
+    - logging.config.fileConfig
+- 웹 스크래핑
+  - HTML 파싱
+    - 정규 표현식
+- xml 과 json
+  - xml
+    - BeautifulSoup
+  - json
+  - csv
+---
+# 파이썬 통계
+---
+### 2024-05-27
+---
+- numpy 브로드캐스팅 연산
+---
+### 2024-05-28
+---
 ---
 ```shell
