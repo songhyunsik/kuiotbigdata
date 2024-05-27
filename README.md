@@ -228,8 +228,8 @@ Array //finMaxinArray else.
 - strcmp
 - strlen
 
-sudo apt get install git
-git clone https://github.com/songhyunsik/kuiotbigdata.git
+- sudo apt get install git // GITHUB를 사용하기 위한 설치 명령어
+- git clone https://github.com/songhyunsik/kuiotbigdata.git (My GITHUB site)
 ---
 # c_src
 ---
