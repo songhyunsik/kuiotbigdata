@@ -1,0 +1,3 @@
+/home/songhyunsik/OpenCV/ch_13/build/CMakeFiles/Template.dir
+/home/songhyunsik/OpenCV/ch_13/build/CMakeFiles/edit_cache.dir
+/home/songhyunsik/OpenCV/ch_13/build/CMakeFiles/rebuild_cache.dir

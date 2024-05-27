@@ -1,0 +1,6 @@
+/home/songhyunsik/OpenCV/ch_11/build/CMakeFiles/Threshold.dir
+/home/songhyunsik/OpenCV/ch_11/build/CMakeFiles/adaptiveThreshold.dir
+/home/songhyunsik/OpenCV/ch_11/build/CMakeFiles/erosion.dir
+/home/songhyunsik/OpenCV/ch_11/build/CMakeFiles/morphologyEX.dir
+/home/songhyunsik/OpenCV/ch_11/build/CMakeFiles/edit_cache.dir
+/home/songhyunsik/OpenCV/ch_11/build/CMakeFiles/rebuild_cache.dir

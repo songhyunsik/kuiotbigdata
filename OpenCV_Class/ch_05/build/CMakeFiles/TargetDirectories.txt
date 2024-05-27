@@ -1,0 +1,9 @@
+/home/songhyunsik/OpenCV/ch_05/build/CMakeFiles/brightTrackbar.dir
+/home/songhyunsik/OpenCV/ch_05/build/CMakeFiles/brightness.dir
+/home/songhyunsik/OpenCV/ch_05/build/CMakeFiles/constract.dir
+/home/songhyunsik/OpenCV/ch_05/build/CMakeFiles/histogram.dir
+/home/songhyunsik/OpenCV/ch_05/build/CMakeFiles/histogramlocal.dir
+/home/songhyunsik/OpenCV/ch_05/build/CMakeFiles/histogramstrect.dir
+/home/songhyunsik/OpenCV/ch_05/build/CMakeFiles/saturated.dir
+/home/songhyunsik/OpenCV/ch_05/build/CMakeFiles/edit_cache.dir
+/home/songhyunsik/OpenCV/ch_05/build/CMakeFiles/rebuild_cache.dir

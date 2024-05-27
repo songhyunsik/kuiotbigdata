@@ -1,0 +1,4 @@
+/home/songhyunsik/OpenCV/ch_06/build/CMakeFiles/rsmatic.dir
+/home/songhyunsik/OpenCV/ch_06/build/CMakeFiles/rsmaticlogical.dir
+/home/songhyunsik/OpenCV/ch_06/build/CMakeFiles/edit_cache.dir
+/home/songhyunsik/OpenCV/ch_06/build/CMakeFiles/rebuild_cache.dir

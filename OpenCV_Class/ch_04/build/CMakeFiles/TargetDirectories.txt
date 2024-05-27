@@ -1,0 +1,17 @@
+/home/songhyunsik/OpenCV/ch_04/build/CMakeFiles/AllOftheFiles.dir
+/home/songhyunsik/OpenCV/ch_04/build/CMakeFiles/Mask.dir
+/home/songhyunsik/OpenCV/ch_04/build/CMakeFiles/Mouse.dir
+/home/songhyunsik/OpenCV/ch_04/build/CMakeFiles/TrackBar.dir
+/home/songhyunsik/OpenCV/ch_04/build/CMakeFiles/draw_circle.dir
+/home/songhyunsik/OpenCV/ch_04/build/CMakeFiles/freeType.dir
+/home/songhyunsik/OpenCV/ch_04/build/CMakeFiles/keyboard.dir
+/home/songhyunsik/OpenCV/ch_04/build/CMakeFiles/keyboard2.dir
+/home/songhyunsik/OpenCV/ch_04/build/CMakeFiles/line.dir
+/home/songhyunsik/OpenCV/ch_04/build/CMakeFiles/line_test.dir
+/home/songhyunsik/OpenCV/ch_04/build/CMakeFiles/puttext.dir
+/home/songhyunsik/OpenCV/ch_04/build/CMakeFiles/storage.dir
+/home/songhyunsik/OpenCV/ch_04/build/CMakeFiles/storage2.dir
+/home/songhyunsik/OpenCV/ch_04/build/CMakeFiles/usefulfunc.dir
+/home/songhyunsik/OpenCV/ch_04/build/CMakeFiles/video.dir
+/home/songhyunsik/OpenCV/ch_04/build/CMakeFiles/edit_cache.dir
+/home/songhyunsik/OpenCV/ch_04/build/CMakeFiles/rebuild_cache.dir

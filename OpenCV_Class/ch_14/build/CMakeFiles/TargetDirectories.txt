@@ -1,0 +1,2 @@
+/home/songhyunsik/OpenCV/ch_14/build/CMakeFiles/edit_cache.dir
+/home/songhyunsik/OpenCV/ch_14/build/CMakeFiles/rebuild_cache.dir

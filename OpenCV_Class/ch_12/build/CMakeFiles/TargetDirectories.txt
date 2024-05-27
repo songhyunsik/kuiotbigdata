@@ -1,0 +1,6 @@
+/home/songhyunsik/OpenCV/ch_12/build/CMakeFiles/Labeling.dir
+/home/songhyunsik/OpenCV/ch_12/build/CMakeFiles/Labelingstat.dir
+/home/songhyunsik/OpenCV/ch_12/build/CMakeFiles/contour.dir
+/home/songhyunsik/OpenCV/ch_12/build/CMakeFiles/contourHier.dir
+/home/songhyunsik/OpenCV/ch_12/build/CMakeFiles/edit_cache.dir
+/home/songhyunsik/OpenCV/ch_12/build/CMakeFiles/rebuild_cache.dir
