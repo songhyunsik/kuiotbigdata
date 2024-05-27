@@ -2,7 +2,7 @@
 C/C++ database arduino...
 
 ---
-# 2024-02-22(DBMS)
+### 2024-02-22(DBMS)
 ---
 
 - 개요
@@ -31,7 +31,7 @@ C/C++ database arduino...
 - 데이터 조작어
 
 ---
-# 2024-02-23(DBMS)
+### 2024-02-23(DBMS)
 ---
 
 - mysql unbuntu 문제 해결
@@ -59,7 +59,7 @@ C/C++ database arduino...
   - 우분투 DBMS에 임의의 데이터 넣고 윈도우에서 확인
 
 ---
-# 2024-02-29(DBMS)
+### 2024-02-29(DBMS)
 ---
   - 빌드 과정 설명
     - make cmake for linux
@@ -81,23 +81,23 @@ C/C++ database arduino...
     - 날짜 함수 // str_to_date, date_format, adddate, sysdate else. // format gudtlr %Y, %m, %d else.
 
 ---
-# 2024-03-04(C)
+### 2024-03-04(C)
 ---
 Array //finMaxinArray else.
 
 ---
-# 2024-03-05(C)
+### 2024-03-05(C)
 ---
 포인터 사용
 
 ---
-# 2024-03-06(C)
+### 2024-03-06(C)
 ---
 포인터를 왜 사용하는가
 - 함수 //swap, selectionSorting else.
 
 ---
-# 2024-03-07(DBMS)
+### 2024-03-07(DBMS)
 ---
  - delete 다시 시도
     - show tables;
@@ -143,7 +143,7 @@ Array //finMaxinArray else.
     - 2장 진도 완료
 
 ---
-# 2024-03-08(DBMS)
+### 2024-03-08(DBMS)
 ---
 
 - python_C_mysql
@@ -209,7 +209,7 @@ Array //finMaxinArray else.
 - 데이터베이스 TEST 시험 진행
 
 ---
-# 2024-03-11(C)
+### 2024-03-11(C)
 ---
 
 - 구조체(structure)
@@ -233,7 +233,7 @@ Array //finMaxinArray else.
     - testString.c
 
 ---
-# 2024-03-15(C)
+### 2024-03-15(C)
 ---
 
 - strcat
@@ -245,14 +245,14 @@ sudo apt get install git
 git clone https://github.com/songhyunsik/kuiotbigdata.git
 
 ---
-### c_src
+# c_src
 C언어 예제 저장용 깃허브
 
 - 고려대 git으로 합침.
 ---
-### c++ 수업
+# c++ 수업
 ---
-# *2024-03-26*
+### 2024-03-26
 - B <directory>       	Add <directory> to the compiler's search paths.
   -v                   	Display the programs invoked by the compiler.
   -###                 	Like -v but options quoted and commands not executed.
@@ -273,40 +273,40 @@ C언어 예제 저장용 깃허브
 - \0 = null
 - endl = \n,\r을 구분없이 사용할수있다.
 ---
-# *2024-03-27*
+### 2024-03-27
 - operator, switch~case, while, for
 ---
-# *2024-03-28*
+### 2024-03-28
 
 - function, array, pointer, quiz_15
 
 - MSB: 최상위 비트
 - LSB: 최하위 비트
 ---
-# *2024-03-29*
+### 2024-03-29
 
 - 연습문제로 연습
 
 - **배열은 0번이 주소값
 ---
-# *2024-04-01*
+### 2024-04-01
 - https://modoocode.com/76
 ---
-# *2024-04-02*
+### 2024-04-02
 
 - 클래스
 - 선언
 - 구현
 ---
-# *2024-03-26*
+### 2024-03-26
 - 연습 문제 7번 해결
 ---
-# *2024-03-26*
+### 2024-03-26
 - 연습문제 8번
 - char ch[10]; → scanf에서 다운받을 때
 - char *pch; → 공간을 만들어줄때
 ---
-# *2024-04-11*
+### 2024-04-11
 - 프렌드 함수 진도
     - -> 프렌드를 사용하면 다른 함수에서도 접근할 수 있다.
 
@@ -326,7 +326,7 @@ C언어 예제 저장용 깃허브
     - -> this를 이용하여 a를 가리킨다.
     - bool operator==(Power op2);을 만들어, a, b의 값이 동일한지 비교한다. 이후 참인지 거짓인지 판별하여 리턴한다.
 ---
-# *2024-04-12*
+### 2024-04-12
 
 - 상속 진도
 
@@ -336,16 +336,16 @@ C언어 예제 저장용 깃허브
 
 - C++ 수업 마무리
 ---
-### TCP_IP_SRC
+# TCP_IP_SRC
 
-# 2024/04/18
+### 2024/04/18
 
 - client: connect(요청함)
 - server: listen(요청을 기다림) - 요청을 받을 수도, 거절할 수 도 있음
 - sudo chmod 777 data txt - 파일의 권한을 변경할 때 사용한다.
 ---
-### OpenCV
-# 2024/05/03
+# OpenCV
+### 2024/05/03
 - OpenCV 설치와 기초 사용법
     - 데비안 설치 --> [sudo apt update / sudo apt install libopencv-dev python3-opencv]
 
@@ -415,9 +415,9 @@ C언어 예제 저장용 깃허브
     - 히스토그램 스트레칭: 보통 명암비가 낮은 영상은 히스토그램이 특정 구간에 집중되어 나타나는데 이러한 히스토그램을 마치 고무줄을 잡아 늘이듯이 펼쳐서 히스토그램 그래프가 그레이스케이일 전 구간에서 나타나도록 변환하는 기법.
     - 히스토그램 평활화(histogram equalization): 영상의 대비를 개선하기 위해 사용.  
 ---
-### Python_Programming
+# Python_Programming
 
-# CHAPTER 2
+### CHAPTER 2
 - Python 수업 시작
 - Miniconda 설치
 - Miniconda에서 my_project 가상 설정
@@ -429,7 +429,7 @@ C언어 예제 저장용 깃허브
     - // 는 int형으로 나오며, 반올림한다고 보면 됨.
     - 파이썬은 증가연산자가 없음. -> a += 1 형식으로 사용해야 함.
 
-# CHAPTER 3
+### CHAPTER 3
 - [2] 표준 압력 함수: input() 함수
 - [3] Lab: 화씨온도 변환기
 - [4] 리스트의 이해
@@ -443,11 +443,11 @@ C언어 예제 저장용 깃허브
 
     -
 
-# CHAPTER 4
+### CHAPTER 4
 - [1] 조건문
 - [3] 반복문 
 
-# CHAPTER 5
+### CHAPTER 5
 - [1] 함수 기초
     - 함수란? - 어떤 일을 수행하는 코드의 덩어리
     - 함수의 선언 
@@ -472,15 +472,15 @@ C언어 예제 저장용 깃허브
 
 - [2] 함수 심화
 
-# CHAPTER 6
+### CHAPTER 6
 - [1] 문자열의 이해
 - [2] 함수 심화
 
-# CHAPTER 7
+### CHAPTER 7
 
-# CHAPTER 8
+### CHAPTER 8
 
-# CHAPTER 9
+### CHAPTER 9
 - [1] 람다 함수
     - 람다 함수 사용: 함수의 이름 없이 함수처럼 사용할 수 있는 익명의 함수수
     - 람다 함수의 다양한 형태: 람다 함수는 다양한 형태로 사용할 수 있다.
@@ -497,7 +497,7 @@ C언어 예제 저장용 깃허브
         - 한 개 이상의 시퀸스 자료형 데이터의 처리
             - map() 함수의 또 다른 특징은 2개 이상의 시퀸스 자료형 데이터를 처리하는 데도 문제가 없어, 여러 개의 시퀸스 자료형 데이터를 입력값으로 사용할 수 있다는 점이다.
 
-# CHAPTER 10
+### CHAPTER 10
 - [1] 객체 지향 프로그래밍의 이해
     - 객체 지향 프로그래밍을 배우는 이유: 다른 사람이 작성한 코드를 어떻게 사용하면 좋을지에 대한 답이기 때문이다.
     - 객체와 클래스
