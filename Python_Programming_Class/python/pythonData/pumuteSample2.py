@@ -33,6 +33,9 @@ def main():
     ax.text(0.5, 100, 'Observed\ndifference', bbox={'facecolor': 'white'})
     ax.set_xlabel("Conversion rate (percent)")
     ax.set_ylabel("Frequency")
+
+    # p Value
+    print(np.mean([diff > obs_pct_diff for diff in perm_diffs]))
     plt.show()
 
 
