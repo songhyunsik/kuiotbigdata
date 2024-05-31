@@ -42,8 +42,5 @@ def main():
     for name, coef in zip(best_variables, best_model.coef_):
         print(f"\t{name}: {coef:.3f}")
 
-
-
-
 if __name__ == "__main__":
     main()
