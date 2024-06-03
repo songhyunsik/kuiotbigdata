@@ -1,5 +1,5 @@
 import pandas as pd
-import torch
+import torch # conda install torch
 from torch.utils.data import DataLoader, Dataset
 
 class MyDataset(Dataset):
