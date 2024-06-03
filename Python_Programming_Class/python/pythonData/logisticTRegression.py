@@ -29,6 +29,13 @@ def main():
     result = logit_reg.predict(new_loan)
     print(f"result: {result}")
 
+    # logistic predicted value
+    pred = pd.DataFrame(logit_reg.predict_log_proba(X), columns=logit_reg.classes_)
+    print(f"log_probability : \n {pred.describe()}")
+    pred = pd.DataFrame(logit_reg.predict_log_proba(X), columns=logit_reg.classes_)
+    print(f"probability : \n {pred.describe}")
+    print(pred.head())
+
     
 if __name__ == "__main__":
     main()
