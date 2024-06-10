@@ -623,17 +623,203 @@ C언어 예제 저장용 깃허브
 ### 2024-06-04
 ---
 
+- [배깅과 랜덤 포레스트]
+
+  - 앙상블(ensmeble) : 
+  
+  - 배깅(bagging) : 
+
+  - 랜덤 포레스트(random forest) : 
+
+  - 변수 중요도(Variable Importance) : 
+
+  - 하이퍼파라미터
+
+- [부스팅]
+
+  - 앙상블(ensmeble) : 
+
+  - 부스팅(boosting) : 
+
+  - 에이다부스트(AdaBoost) : 
+
+  - 그레이디언트 부스팅(gradient boosting) : 
+
+  - 확률적 그레이디언트 부스팅(stochastic gradient boosting) :
+
+  - 정규화(regularization) : 
+
+  - 하이퍼파라미터(hyperparameter) : 
+
+  - 부스팅 알고리즘 :
+
+  - XG부스트 : 
+
+  - 정규화 : 오버피팅 피하기 :
+    - L1 정규화(Lasso) : 
+    - L2 정규화(Ridge) :
+    - Elastic Net :
+
+  - 하이퍼파라미터와 교차타당성검사 : 
+    - K-폴드 교차타당성 :
+
+- [챕터 7 비지도 학습(Unsupervised Learning)]
+
+  - 비지도 학습(Unsupervised Learning) :
+
+  - 클러스터링(Clustering) : 
+
+  - K-평균 클러스터링(K-means Clustering) :
+
+  - 계층적 클러스터링(Hierarchical Clustering) : 
+
+  - DBSCAN (Density-Based Spatial Clustering of Applications with Noise):
+
+  - 차원 축소(Dimensionality Reduction) : 
+
+  - 주성분 분석(PCA, Principal Component Analysis) :
+
+  - 선형판별분석(LDA, Linear Discriminant Analysis) : 
+
+  - t-SNE(t-Distributed Stochastic Neighbor Embedding) :
+
+- [주성분 분석(PCA, Principal Component Analysis)]
+
+  - 주성분 분석(PCA, Principal Component Analysis) :
+
+  - 주성분(principal component) :
+
+  - 부하(loading) : 
+
+  - 스크리그래프(screeplot) :
+
+  - 비지도 학습 :
+
+  - 클러스터링 :
+
+  - 차원 축소 :
+
+  - 주성분 계산(Principal Component Calculation) : 
+    - [계산과정]
+    - 데이터 표준화 :
+    - 공분산 행렬 계산 :
+    - 고유값 및 고유백터 계산 :
+    - 주성분 선택 :
+    - 주성분 변환 :
+
+  - 공변동(covariation) : 
+
+  - 주성분 해석(Principal Component Interpretation) :
+    - [주성분의 해석 단계]
+    - 고유백터 :
+    - 주성분 점수 :
+    - 주성분의 분산 :
+
+  - 스크리 그래프(Scree Plot) :
+    - [그리는 방법]
+
+  - 대응분석 : 
+    - [주요단계]
+    - 교차표 구성 :
+    - 행과 열의 프로파일 계산 :
+    - 카이제곱 거리 계산 :
+    - 고유값과 고유백터 계산 :
+    - 차원 축소 및 시각화 :
+
+  - 대응분석의 해석
+    - 행과 열의 좌표 : 
+    - 주성분의 중요도 : 
+    - 그래프 해석 :
+
+  - 대응분석과 주성분 분석의 비교
+    - 데이터 유형 :
+    - 수학적 원리 :
+    - 목표 :
+
+- [K-평균 클러스터링]
+
+  - K-평균 클러스터링 :
+
+  - 클러스터(cluster) :
+  - 클러스터 평균(cluster mean) : 
+  - k : 클러스터의 개수
+
 ---
 ### 2024-06-05
 ---
+
+- [계층적 클러스터링(hierarchical clustering)]
+
+  - 계층적 클러스터링(hierarchical clustering) : 
+
+  - 덴드로그램(dendrogram) : 
+    - 장점 :
+    - 단점 :
+
+  - 거리(distance)
+
+  - 비유사도(dissimlarity)
+    - 비유사도 측정: 
+    - 비유사도 측정 방법 요약
+      - 단일연결 : 
+      - 완전연결 : 
+      - 평균연결 : 
+      - 워드기법(Ward's Method) :
+
+  - 병합 알고리즘 : 
+    - 초기화 : 
+    - 반복 병합 :
+
+- [모델 기반 클러스터링(Model-based Clustering)]
+
+  - 모델 기반 클러스터링(Model-based Clustering) : 
+
+  - 정규혼합 모델(Gaussian Mixture Model, GMM) : 
+
+  - 다변량정규분포 :
+
+  - 정규혼합 : 
+
+  - 클러스터 개수 결정하기
+    - 베이즈 정보 기준(BIC)
+
+- [스케일링과 범주형 변수]
+
+  - 스케일링(scaling) : 
+
+  - 정규화(normalization) : 
+
+  - 고워거리(Gower's distance) : 
+
+  - 변수 스케일링(Feature Scaling) : 
+    - [특성]
+    - 모델 성능 향상 : 
+    - 수렴 속도 향상 :
+
+  - 주요 스케일링 기법 :
+
+  - 지배변수(Dominant Variable) :
+
+  - 범주형 데이터와 고위 거리
+    - 범주형 데이터와 거리 측정 : 
+
+  - 혼합데이터의 클러스터링 문제 : 
 
 ---
 ### 2024-06-07
 ---
 
----
-### 2024-06-04
----
+- [Kaggle] : 정의와 사용법 설명 들은 후, titanic 문제 해결
+- [Colab] : Colab을 통해 실습을 진행함. / 오버피팅, 변수중요성 등의 개념을 학습함.
+    - [실습예제]
+    - overfitting.ipyb
+    - xgboost_py.ipyb
+    - kaggle.Titanic1.ipyb
+    - kaggle.Titanic2.ipyb
+
+- house prices 과제
+
+- 오후에는 위니드소프트 특강.
 
 ---
 ### 2024-06-10
