@@ -35,7 +35,20 @@ void push(Stack *ps, int data) {
    ++ps->tos;
 }
 
-int pop(Stack *ps) {
+int pop(Stack *ps, int *pData) {
+   // if(ps->tos == 0) {
+   //    fprintf(stderr,"stack is empty\n");
+   //    exit(2);
+   // }
+
+   assert(ps->tos != 0);
+
+   --ps->tos;
+   //return ps->array[ps->tos];
+   *pData = ps->pArr[ps->tos];
+}
+
+/*int pop(Stack *ps) {
    // if(ps->tos == 0) {
    //    fprintf(stderr,"stack is empty\n");
    //    exit(2);
@@ -46,4 +59,4 @@ int pop(Stack *ps) {
    --ps->tos;
    //return ps->array[ps->tos];
    return ps->pArr[ps->tos];
-}
+}*/
