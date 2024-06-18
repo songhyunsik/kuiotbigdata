@@ -22,7 +22,8 @@ void push(Stack *ps, const void *pData) {
    assert(ps->tos != ps->size);
 
    //ps->pArr[ps->tos] = data;
-   memcpy(&ps->pArr[ps->tos], pData, ps->eleSize);
+   //memcpy(&ps->pArr[ps->tos], pData, ps->eleSize);
+   memcpy((unsigned char *)ps->pArr + ps->tos * ps->eleSize, pData, ps->eleSize);
    ++ps->tos;
 }
 
@@ -32,7 +33,8 @@ int pop(Stack *ps, void *pData) {
 
    --ps->tos;
    //*pData = ps->pArr[ps->tos];
-   memcpy(pData, &ps->pArr[ps->tos], ps->eleSize);
+   //memcpy(pData, &ps->pArr[ps->tos], ps->eleSize);
+   memcpy(pData, (unsigned char *)ps->pArr + ps->tos * ps->eleSize, ps->eleSize);
 }
 
 /*int pop(Stack *ps) {
