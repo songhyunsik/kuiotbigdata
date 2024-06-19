@@ -14,6 +14,7 @@ void cleanupStack(Stack *ps);
 
 void push(Stack *ps, int data);
 
-int pop(Stack *ps);
+//int pop(Stack *ps);
+int pop(Stack *ps, int *pData);
 
 #endif
