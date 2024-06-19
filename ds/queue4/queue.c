@@ -6,16 +6,13 @@
 void initqueue(Queue *pq, int size) {
     pq->pArr = malloc(sizeof(int) * size);
     pq->size = size;
+    pq->front = 0;
     pq->tos = 0;
 }
 
 void cleanupQueue(Queue *pq) {
     free(pq->pArr);
 }
-
-/*static int queue[100];
-static int rear;
-static int front;*/
 
 void push(Queue *pq, int data) {
     //queue[rear] = data;
